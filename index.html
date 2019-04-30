@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Widget Corner</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div class="formdata">
+		<form id="frm">
+			<table>
+				<tr>
+					<td>Vertical</td>
+					<td>:</td>
+					<td><input type="radio" name="vertical" value="top" required checked> Top</td>
+					<td><input type="radio" name="vertical" value="bottom" > bottom</td>
+				</tr>
+				<tr>
+					<td>Horizontal</td>
+					<td>:</td>
+					<td><input type="radio" name="horizontal" value="left" required checked> Left</td>
+					<td><input type="radio" name="horizontal" value="right"> right</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="radio" name="name" value="1" required checked> Show</td>
+					<td><input type="radio" name="name" value="0" > Hide</td>
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td>:</td>
+					<td><input type="radio" name="phone" value="1" required checked> Show</td>
+					<td><input type="radio" name="phone" value="0"> Hide</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>:</td>
+					<td><input type="radio" name="email" value="1" required checked> Show</td>
+					<td><input type="radio" name="email" value="0"> Hide</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<br>
+						<button class="button" type="button" onclick="save()">Submit</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<div id="buttonfloat" onclick="fn_hide()">
+      <img src="images/minimised.png" class="float">
+    </div>
+
+    <div class="formwidget" id="formwidget">
+      <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Success !</strong> You will receive a call soon
+      </div>
+      <div class="loader"></div>
+      <button class="close" onclick="fn_hide()" style="background-color: red;border-radius: 100%; padding: 0px 10px 5px 10px">x</button>
+      <h3 class="header">DO YOU WANT A CALLBACK</h3>
+      <p class="text">Please give us your details and we will get back to you</p>
+      <form>
+      <div id="inputname">
+        <input type="text" class="input" id="name" name="name" placeholder="Your Name">
+      </div>
+      <div class="error" id="errname" style="display: none"><span>Name is Required</span></div>
+      <div id="inputtlp">
+        <select style="width: 17%" class="input" id="code" name="code">
+          <option value="62">+62 (Indonesia)</option>
+          <option value="93">+93 (Afganistan)</option>
+          <option value="54">+54 (Argentina)</option>
+          <option value="61">+61 (Australia)</option>
+        </select>
+        <input type="number" style="width: 81%" class="input" id="telephone" name="telephone" placeholder="e.g 86747175589">
+      </div>
+      <br>
+      <div class="error" id="errtlp" style="display: none"><span>Telephone is Required</span></div>
+      <div class="error" id="errtlp2" style="display: none"><span>Is not Number Telephone</span></div>
+      <select class="input" name="interested" id="interested">
+        <option>I'm Interested In Content</option>
+        <option>I'm Interested in Design</option>
+      </select>
+      <input type="text" class="input" id="eml" name="eml" placeholder="Email">
+      <br>
+      <div class="error" id="erremail" style="display: none"><span>Email is Required</span></div>
+      <div class="error" id="erremail2" style="display: none"><span>Is not Email</span></div>
+      <br>
+      <p align="center"><button type="button" class="button" onclick="post()">Call Now</button></p>
+      </form>
+    </div>
+
+</body>
+</html>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/main.js"></script>

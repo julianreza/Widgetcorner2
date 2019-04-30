@@ -1,0 +1,115 @@
+.float{
+  position:fixed;
+  z-index: 1;
+  width:300px;
+  cursor: pointer;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #65f442;
+  color: white;
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header {
+  font-family: 'Century Gothic';
+}
+
+.input{
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid black;  
+  color: white;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 5px;
+  font-family: 'Century Gothic';
+  background-color: #295788;
+}
+
+.button{
+  text-align: center;
+  width: 150px;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #669ef9;
+  border: none;
+  cursor: pointer;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 70px;
+  height: 70px;
+  right: 42%;
+  top : 42%;
+  display: none;
+  position: absolute;
+  z-index:9999;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error{
+  color: red;
+  font-family: 'Century Gothic';
+  font-size: 15px;
+  font-style: italic;
+  width: 100%;
+}
+
+.text{
+  font-size: 11px;
+  font-family: 'Century Gothic';
+}
+
+.buttonwidget{
+  display: block;
+  display: flex;
+  justify-content: center;
+}
+
+.close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.formwidget{
+  display: none;
+  color: white;
+  border-radius: 3%;
+  position:fixed;
+  z-index: 1;
+  background-color: #295788;
+  padding: 20px;
+  width:300px;
+}
+.formdata{
+	background-color: #8080ff;
+	border-radius: 20px;
+	width: 19%;
+	padding: 30px;
+	margin: auto;
+	margin-top: 10%;
+	font-family: 'Century Gothic';
+}
